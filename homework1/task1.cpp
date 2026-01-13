@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <Windows.h>
 
 enum Month {
     JANUARY = 1,
@@ -19,50 +20,51 @@ enum Month {
 std::string getMonth(Month month) {
     switch (month) {
     case JANUARY:
-        return "Январь";
+        return "ГџГ­ГўГ Г°Гј";
     case FEBRUARY:
-        return "Февраль";
+        return "Г”ГҐГўГ°Г Г«Гј";
     case MARCH:
-        return "Март";
+        return "ГЊГ Г°ГІ";
     case APRIL:
-        return "Апрель";
+        return "ГЂГЇГ°ГҐГ«Гј";
     case MAY:
-        return "Май";
+        return "ГЊГ Г©";
     case JUNE:
-        return "Июнь";
+        return "Г€ГѕГ­Гј";
     case JULY:
-        return "Июль";
+        return "Г€ГѕГ«Гј";
     case AUGUST:
-        return "Август";
+        return "ГЂГўГЈГіГ±ГІ";
     case SEPTEMBER:
-        return "Сентябрь";
+        return "Г‘ГҐГ­ГІГїГЎГ°Гј";
     case OCTOBER:
-        return "Октябрь";
+        return "ГЋГЄГІГїГЎГ°Гј";
     case NOVEMBER:
-        return "Ноябрь";
+        return "ГЌГ®ГїГЎГ°Гј";
     case DECEMBER:
-        return "Декабрь";
+        return "Г„ГҐГЄГ ГЎГ°Гј";
     default:
         return "";
     }
 }
 
 int main() {
-    setlocale(LC_ALL, "RU");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
 
     int monthNumber;
 
     while (true) {
-        std::cout << "Введите номер месяца: ";
+        std::cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г¬ГҐГ±ГїГ¶Г : ";
         std::cin >> monthNumber;
 
         if (monthNumber == 0) {
-            std::cout << "До свидания" << std::endl;
+            std::cout << "Г„Г® Г±ГўГЁГ¤Г Г­ГЁГї" << std::endl;
             break;
         }
 
         if (monthNumber < 1 || monthNumber > 12) {
-            std::cout << "Неправильный номер!" << std::endl;
+            std::cout << "ГЌГҐГЇГ°Г ГўГЁГ«ГјГ­Г»Г© Г­Г®Г¬ГҐГ°!" << std::endl;
             continue;
         }
 
@@ -71,4 +73,5 @@ int main() {
     }
 
     return 0;
+
 }
