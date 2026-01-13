@@ -20,29 +20,29 @@ enum Month {
 std::string getMonth(Month month) {
     switch (month) {
     case JANUARY:
-        return "ßíâàðü";
+        return "Январь";
     case FEBRUARY:
-        return "Ôåâðàëü";
+        return "Февраль";
     case MARCH:
-        return "Ìàðò";
+        return "Март";
     case APRIL:
-        return "Àïðåëü";
+        return "Апрель";
     case MAY:
-        return "Ìàé";
+        return "Май";
     case JUNE:
-        return "Èþíü";
+        return "Июнь";
     case JULY:
-        return "Èþëü";
+        return "Июль";
     case AUGUST:
-        return "Àâãóñò";
+        return "Август";
     case SEPTEMBER:
-        return "Ñåíòÿáðü";
+        return "Сентябрь";
     case OCTOBER:
-        return "Îêòÿáðü";
+        return "Октябрь";
     case NOVEMBER:
-        return "Íîÿáðü";
+        return "Ноябрь";
     case DECEMBER:
-        return "Äåêàáðü";
+        return "Декабрь";
     default:
         return "";
     }
@@ -55,16 +55,16 @@ int main() {
     int monthNumber;
 
     while (true) {
-        std::cout << "Ââåäèòå íîìåð ìåñÿöà: ";
+        std::cout << "Введите номер месяца: ";
         std::cin >> monthNumber;
 
         if (monthNumber == 0) {
-            std::cout << "Äî ñâèäàíèÿ" << std::endl;
+            std::cout << "До свидания" << std::endl;
             break;
         }
 
         if (monthNumber < 1 || monthNumber > 12) {
-            std::cout << "Íåïðàâèëüíûé íîìåð!" << std::endl;
+            std::cout << "Неправильный номер!" << std::endl;
             continue;
         }
 
@@ -75,3 +75,4 @@ int main() {
     return 0;
 
 }
+
