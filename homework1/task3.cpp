@@ -20,11 +20,11 @@ public:
     }
 
     void GetInfo() {
-        std::cout << "Ãîðîä: " << city << std::endl;
-        std::cout << "Óëèöà: " << street << std::endl;
-        std::cout << "Íîìåð äîìà: " << houseNumber << std::endl;
-        std::cout << "Íîìåð êâàðòèðû: " << flatNumber << std::endl;
-        std::cout << "Èíäåêñ: " << index << std::endl << std::endl;
+        std::cout << "Ð“Ð¾Ñ€Ð¾Ð´: " << city << std::endl;
+        std::cout << "Ð£Ð»Ð¸Ñ†Ð°: " << street << std::endl;
+        std::cout << "ÐÐ¾Ð¼ÐµÑ€ Ð´Ð¾Ð¼Ð°: " << houseNumber << std::endl;
+        std::cout << "ÐÐ¾Ð¼ÐµÑ€ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹: " << flatNumber << std::endl;
+        std::cout << "Ð˜Ð½Ð´ÐµÐºÑ: " << index << std::endl << std::endl;
     }
 };
 
@@ -34,16 +34,16 @@ int main()
     SetConsoleOutputCP(1251);
 
     Address address1;
-    address1.SetInfo("Ìîñêâà", "Àðáàò", 12, 8, 123456);
+    address1.SetInfo("ÐœÐ¾ÑÐºÐ²Ð°", "ÐÑ€Ð±Ð°Ñ‚", 12, 8, 123456);
 
     Address address2;
-    address2.SetInfo("Èæåâñê", "Ïóøêèíà", 59, 143, 953769);
+    address2.SetInfo("Ð˜Ð¶ÐµÐ²ÑÐº", "ÐŸÑƒÑˆÐºÐ¸Ð½Ð°", 59, 143, 953769);
 
     address1.GetInfo();
     address2.GetInfo();
 
     Address address3;
-    address3.SetInfo("Ñàíêò-Ïåòåðáóðã", "Íåâñêèé ïðîñïåêò", 25, 42, 190000);
+    address3.SetInfo("Ð¡Ð°Ð½ÐºÑ‚-ÐŸÐµÑ‚ÐµÑ€Ð±ÑƒÑ€Ð³", "ÐÐµÐ²ÑÐºÐ¸Ð¹ Ð¿Ñ€Ð¾ÑÐ¿ÐµÐºÑ‚", 25, 42, 190000);
 
     address3.GetInfo();
 
