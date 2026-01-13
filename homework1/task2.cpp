@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <Windows.h>
 
 struct BankAccount {
     int accountNumber = 0;
@@ -12,26 +13,28 @@ void changeBalance(BankAccount& account, double newBalance) {
 }
 
 int main() {
-    setlocale(LC_ALL, "RU");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
 
     BankAccount account;
 
-    std::cout << "Ââåäèòå íîìåð ñ÷¸òà: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÑ‡Ñ‘Ñ‚Ð°: ";
     std::cin >> account.accountNumber;
 
-    std::cout << "\nÂâåäèòå èìÿ âëàäåëüöà: ";
+    std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð²Ð»Ð°Ð´ÐµÐ»ÑŒÑ†Ð°: ";
     std::cin >> account.name;
 
-    std::cout << "\nÂâåäèòå áàëàíñ: ";
+    std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±Ð°Ð»Ð°Ð½Ñ: ";
     std::cin >> account.balance;
 
     double newBalance;
-    std::cout << "\nÂâåäèòå íîâûé áàëàíñ: ";
+    std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ð¹ Ð±Ð°Ð»Ð°Ð½Ñ: ";
     std::cin >> newBalance;
 
     changeBalance(account, newBalance);
 
-    std::cout << "\nÂàø ñ÷¸ò: " << account.name << ", " << account.accountNumber << ", " << account.balance << std::endl;
+    std::cout << "\nÐ’Ð°Ñˆ ÑÑ‡Ñ‘Ñ‚: " << account.name << ", " << account.accountNumber << ", " << account.balance << std::endl;
 
     return 0;
+
 }
