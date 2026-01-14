@@ -3,49 +3,36 @@
 #include <Windows.h>
 
 struct Address {
-private:
     std::string city = "";
     std::string street = "";
     int houseNumber = 0;
     int flatNumber = 0;
     int index = 0;
-
-public:
-    void SetInfo(std::string c, std::string s, int h, int f, int i) {
-        city = c;
-        street = s;
-        houseNumber = h;
-        flatNumber = f;
-        index = i;
-    }
-
-    void GetInfo() {
-        std::cout << "Город: " << city << std::endl;
-        std::cout << "Улица: " << street << std::endl;
-        std::cout << "Номер дома: " << houseNumber << std::endl;
-        std::cout << "Номер квартиры: " << flatNumber << std::endl;
-        std::cout << "Индекс: " << index << std::endl << std::endl;
-    }
 };
+
+void dataOutput(Address& address) {
+    std::cout << "Город: " << address.city << std::endl;
+    std::cout << "Улица: " << address.street << std::endl;
+    std::cout << "Номер дома: " << address.houseNumber << std::endl;
+    std::cout << "Номер квартиры: " << address.flatNumber << std::endl;
+    std::cout << "Индекс: " << address.index << std::endl << std::endl;
+}
 
 int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    Address address1;
-    address1.SetInfo("Москва", "Арбат", 12, 8, 123456);
+    Address address1 = { "Москва", "Арбат", 12, 8, 123456 };
+    Address address2 = { "Ижевск", "Пушкина", 59, 143, 953769 };
 
-    Address address2;
-    address2.SetInfo("Ижевск", "Пушкина", 59, 143, 953769);
+    dataOutput(address1);
+    dataOutput(address2);
 
-    address1.GetInfo();
-    address2.GetInfo();
+    Address address3 = { "Санкт-Петербург", "Невский проспект", 25, 42, 190000 };
+    
 
-    Address address3;
-    address3.SetInfo("Санкт-Петербург", "Невский проспект", 25, 42, 190000);
-
-    address3.GetInfo();
+    dataOutput(address3);
 
     return 0;
 }
